@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens - Recruta IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #0D354B;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main-content {
+            width: 80%;
+            margin: 20px;
+        }
+
+        .mensagens {
+            background-color: #1B4965;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .message-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message-item {
+            display: flex;
+            align-items: center;
+            background-color: #82C4E8;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .user-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .message-content h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #083D77;
+        }
+
+        .message-content p {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .message-badge {
+            background-color: #008AAC;
+            color: #fff;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Estilização do botão de voltar */
+        .back-button, .next-button {
+            background-color: #008AAC;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .back-button:hover, .next-button:hover {
+            background-color: #005F6B;
+        }
+
+        /* Estilização do botão de próximo */
+        .next-button {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Botão de Voltar -->
+    <button class="back-button" onclick="window.history.back()">Voltar</button>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <section class="mensagens">
+            <h2>Mensagens</h2>
+            <div class="message-list">
+                <div class="message-item">
+                    <img src="./img-video/imgsms2.png" alt="Bilal Smith" class="user-image">
+                    <div class="message-content">
+                        <h3>Bilal Smith</h3>
+                        <p>Eu vi que você adicionou um novo certificado no seu perfil, pode me falar mais sobre suas habilidades no momento?!</p>
+                    </div>
+                    <div class="message-badge">1</div>
+                </div>
+
+                <div class="message-item">
+                    <img src="./img-video/imgsms.png" alt="Sonia Alves" class="user-image">
+                    <div class="message-content">
+                        <h3>Sonia Alves</h3>
+                        <p>O questionário do início, vi que fica no meu perfil. Isso é muito bom para as empresas saberem que tipo de funcionário eu serei.</p>
+                    </div>
+                    <div class="message-badge">3</div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="./img-video/imgsms4.png" alt="Soraia Fonseca" class="user-image">
+                    <div class="message-content">
+                        <h3>Soraia Fonseca</h3>
+                        <p>Meus parabéns, agora você faz parte da nossa equipe.</p>
+                    </div>
+                    <div class="message-badge">1</div>
+                </div>
+                
+                <div class="message-item">
+                    <img src="./img-video/imgsms3.png" alt="Empresa X" class="user-image">
+                    <div class="message-content">
+                        <h3>Empresa X</h3>
+                        <p>Gostei muito do que vi no seu perfil, o que acha de participar da nossa seletiva para a vaga XY?</p>
+                    </div>
+                    <div class="message-badge">4</div>
+                </div>
+
+                <!-- Additional viewed messages without badges -->
+                <div class="message-item">
+                    <img src="./img-video/imgsms5.png" alt="Bia" class="user-image">
+                    <div class="message-content">
+                        <h3>Bia</h3>
+                        <p>Entendi, obrigado pela resposta! Precisamos de mais informações sobre suas certificações.</p>
+                    </div>
+                </div>
+
+                <div class="message-item">
+                    <img src="./img-video/imgsms6.png" alt="Albuquerque" class="user-image">
+                    <div class="message-content">
+                        <h3>Albuquerque</h3>
+                        <p>Que ótimo! Suas experiências no perfil realmente ajudarão nas suas candidaturas futuras.</p>
+                    </div>
+                </div>
+
+                <div class="message-item">
+                    <img src="./img-video/imgsms7.png" alt="Atendente" class="user-image">
+                    <div class="message-content">
+                        <h3>Atendente</h3>
+                        <p>Sim, claro. Pode contar comigo para o desenvolvimento desse novo projeto.</p>
+                    </div>
+                </div>
+
+                <div class="message-item">
+                    <img src="./img-video/imgsms8.png" alt="Empresa Atacado" class="user-image">
+                    <div class="message-content">
+                        <h3>Arte Inova</h3>
+                        <p>Estamos aguardando sua resposta. Fique à vontade para entrar em contato conosco diretamente pelo email...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão de Próximo -->
+        <button class="next-button" onclick="window.location.href='ajudacomum.html'">Próximo</button>
+    </main>
+</body>
+
+</html>

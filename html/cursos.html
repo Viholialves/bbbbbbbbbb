@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruta - Cursos</title>
+    <style> 
+        /* Estilo do body */ 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0D354B;
+            color: #ffffff;
+            display: flex;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            background-color: #0D354B;
+            width: 220px;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebar-logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        .menu-item {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .menu-icon {
+            width: 20px;
+            margin-right: 10px;
+        }
+        
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: linear-gradient(to right, #12232e, #203647);
+            color: #ffffff;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-bar {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            width: 50%; /* Reduz a largura da barra de pesquisa */
+        }
+        
+        .header-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .header-icon {
+            width: 25px;
+            cursor: pointer;
+        }
+        
+        /* Cursos Area */
+        .cursos-area {
+            color: #ffffff;
+        }
+        
+        .cursos-recomendados {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .curso-card {
+            background-image: url(../img-video/1curso.png);
+            padding: 30px;
+            border-radius: 8px;
+            width: calc(33.33% - 20px);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .curso-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        .outros-cursos {
+            margin-top: 20px;
+        }
+        
+        .outro-curso-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .curso-icon {
+            width: 50px;
+            margin-right: 15px;
+        }
+        
+        .curso-details {
+            flex: 1;
+        }
+        
+        .curso-details h3 {
+            color: #00BFA6;
+        }
+        
+        .curso-details p {
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        /* Botão de Próximo */
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #0D354B;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 200px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-button:hover {
+            background-color: #0D354B;
+            color: #ffffff;
+        }
+    </style>
+   
+</head>
+
+<body>
+
+    <!-- Sidebar com logo e menu -->
+    <aside class="sidebar">
+        <img src="./img-video/logo.png" alt="Recruta Acessível ao Trabalho" class="sidebar-logo">
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <!-- Header com barra de navegação -->
+        <header class="header">
+            <label for="search-bar">Pesquisar:</label>
+            <span class="audio-icon" onclick="speakText('Pesquisar')">🔊</span>
+            <input id="search-bar" type="text" placeholder="Digite o que deseja encontrar" class="search-bar">
+            <div class="header-icons">
+                <img src="./img-video/notificacao.png" alt="Notificações" class="header-icon">
+                <img src="./img-video/sms.png" alt="Mensagens" class="header-icon">
+                <img src="./img-video/icousuario.png" alt="Perfil" class="header-icon">
+            </div>
+        </header>
+
+        <!-- Área de Cursos -->
+        <section class="cursos-area">
+            <h2>Cursos recomendados para você <span class="audio-icon" onclick="speakText('Cursos recomendados para você')">🔊</span></h2>
+            <div class="cursos-recomendados">
+                <div class="curso-card">
+                    <h3>Auxiliar de Produção (Temporário) <span class="audio-icon" onclick="speakText('Auxiliar de Produção Temporário')">🔊</span></h3>
+                    <p>Esse cargo envolve trabalhar na linha de produção de fábricas ou empresas que lidam com grande volume de produtos. É uma função simples e de fácil aprendizado, sendo muito comum em contratações temporárias.</p>
+                </div>
+                <div class="curso-card">
+                    <h3>Figma <span class="audio-icon" onclick="speakText('Figma')">🔊</span></h3>
+                    <p>Explore o uso do Figma para criar protótipos e interfaces de usuário. Aprenda a colaborar em tempo real com sua equipe e criar designs que facilitam o fluxo de trabalho de desenvolvimento de produtos digitais.</p>
+                </div>
+                <div class="curso-card">
+                    <h3>Auxiliar de Estoque (Temporário) <span class="audio-icon" onclick="speakText('Auxiliar de Estoque Temporário')">🔊</span></h3>
+                    <p>Esse profissional é responsável por ajudar na organização e manutenção do estoque da empresa. É comum em períodos de alta demanda, como Natal ou Black Friday.</p>
+                </div>
+            </div>
+
+            <h2>Outros cursos <span class="audio-icon" onclick="speakText('Outros cursos')">🔊</span></h2>
+            <div class="outros-cursos">
+                <div class="outro-curso-item">
+                    <img src="./img-video/icocursos.png" alt="Curso de UX/UI" class="curso-icon">
+                    <div class="curso-details">
+                        <h3>Estágio administrativo <span class="audio-icon" onclick="speakText('Estágio administrativo')">🔊</span></h3>
+                        <p>O estagiário de administração auxilia nas rotinas administrativas da empresa. Isso inclui organizar documentos, atender ligações, enviar e-mails, e realizar tarefas de apoio ao setor financeiro ou de recursos humanos.</p>
+                    </div>
+                </div>
+                <div class="outro-curso-item">
+                    <img src="./img-video/icocursos.png" alt="Curso de Tipografia" class="curso-icon">
+                    <div class="curso-details">
+                        <h3>Design de Tipografia para Web <span class="audio-icon" onclick="speakText('Design de Tipografia para Web')">🔊</span></h3>
+                        <p>O design de tipografia para web ensina como escolher e aplicar fontes de forma eficaz em projetos online, focando na legibilidade e na estética para melhorar a experiência do usuário.</p>
+                    </div>
+                </div>
+                <div class="outro-curso-item">
+                    <img src="./img-video/icocursos.png" alt="Curso de UX/UI" class="curso-icon">
+                    <div class="curso-details">
+                        <h3>UX/UI Design <span class="audio-icon" onclick="speakText('UX/UI Design')">🔊</span></h3>
+                        <p>UI/UX design é sobre criar interfaces digitais intuitivas e agradáveis para os usuários. UI (User Interface) se concentra na aparência e interatividade dos elementos visíveis, enquanto UX (User Experience) considera a experiência geral do usuário ao interagir com o produto ou serviço.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Próximo -->
+            <button class="next-button" onclick="window.location.href='ajuda.html'">Próximo</button>
+        </section>
+    </main>
+
+    <script>
+        function speakText(text) {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'pt-BR'; // Configura o idioma para português do Brasil
+            synth.speak(utterance);
+        }
+    </script>
+</body>
+
+</html>

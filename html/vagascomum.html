@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruta - Vagas</title>
+    <style>
+        /* Estilo do body */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0D354B;
+            color: #ffffff;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #0D354B;
+            width: 220px;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar-logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .menu-item {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-icon {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background: linear-gradient(to right, #12232e, #203647);
+            color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .header-icon {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        /* Vagas Area */
+        .vagas-area {
+            background-color: #2983B5;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filter-button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #0D354B;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        /* Cards de Vagas */
+        .recommended-jobs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .job-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .job-card {
+            background-color: #0D354B;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .job-icon {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para a área "O que há de novo" */
+        .new-jobs {
+            margin-top: 20px;
+        }
+
+        .job-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .job-item {
+            display: flex;
+            align-items: center;
+            background-color: #0D354B;
+            padding: 10px;
+            border-radius: 8px;
+            color: #ffffff;
+        }
+
+        .job-details {
+            flex: 1;
+            margin-left: 15px;
+        }
+
+        .job-time {
+            color: #a0aec0;
+        }
+
+        /* Estilo do botão Próximo */
+        .next-button {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #0D354B;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-button:hover {
+            background-color: #0D354B;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar com logo e menu -->
+    <aside class="sidebar">
+        <img src="./img-video/logo.png" alt="Recruta Acessível ao Trabalho" class="sidebar-logo">
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+        <!-- Header com barra de navegação -->
+        <header class="header">
+            <input type="text" placeholder="Digite o que deseja encontrar" class="search-bar">
+            <div class="header-icons">
+                <img src="./img-video/notificacao.png" alt="Notificações" class="header-icon">
+                <a href="smscomum.html">
+                    <img src="./img-video/sms.png" alt="Mensagens" class="header-icon">
+                </a>
+                <img src="./img-video/icousuario.png" alt="Perfil" class="header-icon">
+            </div>
+        </header>
+
+        <!-- Área de Vagas -->
+        <section class="vagas-area">
+            <div class="filters">
+                <button class="filter-button">Designer</button>
+                <button class="filter-button">Remote</button>
+                <button class="filter-button">Auxiliar</button>
+                <button class="filter-button">RH</button>
+            </div>
+
+            <h2>Recomendados para você</h2>
+
+            <div class="recommended-jobs">
+                <a href="ofertacomum.html" class="job-link">
+                    <div class="job-card">
+                        <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                        <h3>UX Designer</h3>
+                        <p>Fokhaya Johns</p>
+                        <p>Seattle, US</p>
+                        <p>Remoto</p>
+                        <p>1 dia atrás em recruta.ia</p>
+                    </div>
+                </a>
+                <a href="ofertacomum.html" class="job-link">
+                    <div class="job-card">
+                        <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                        <h3>Auxiliar do RH</h3>
+                        <p>Rio de Janeiro</p>
+                        <p>capital</p>
+                        <p>semi-presencial</p>
+                        <p>2 dias atrás em recruta.ia</p>
+                    </div>
+                </a>
+                <a href="ofertacomum.html" class="job-link">
+                    <div class="job-card">
+                        <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                        <h3>Equipe de Designers</h3>
+                        <p>Sorocaba</p>
+                        <p>SP</p>
+                        <p>Remoto</p>
+                        <p>7 dias atrás em recruta.ia</p>
+                    </div>
+                </a>
+                <a href="ofertacomum.html" class="job-link">
+                    <div class="job-card">
+                        <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                        <h3>Auxiliar</h3>
+                        <p>Serra Talhada</p>
+                        <p>Recife</p>
+                        <p>Presencial</p>
+                        <p>3 dias atrás em recruta.ia</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="new-jobs">
+                <h2>O que há de novo</h2>
+                <div class="job-list">
+                    <a href="ofertacomum.html" class="job-link">
+                        <div class="job-item">
+                            <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                            <div class="job-details">
+                                <h3>Software Engineer</h3>
+                                <p>Fokhaya Johns</p>
+                                <p>Seattle, US</p>
+                                <p>Remoto</p>
+                            </div>
+                            <p class="job-time">1 dia atrás em recruta.ia</p>
+                        </div>
+                    </a>
+                    <a href="ofertacomum.html" class="job-link">
+                        <div class="job-item">
+                            <img src="./img-video/j.png" alt="Ícone da Vaga" class="job-icon">
+                            <div class="job-details">
+                                <h3>Data Analyst</h3>
+                                <p>EUA</p>
+                                <p>EUA</p>
+                                <p>Remoto</p>
+                            </div>
+                            <p class="job-time">2 dias atrás em recruta.ia</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botão de Próximo -->
+            <button class="next-button" onclick="window.location.href='cursosnormal.html'">Próximo</button>
+
+        </section>
+    </main>
+</body>
+
+</html>
